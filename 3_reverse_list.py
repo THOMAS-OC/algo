@@ -24,11 +24,11 @@
 
 
 """
-On crée une var iteration avec pour valeur 1 et une var index avec valeur 0
-On crée
+On crée une var "iteration" avec pour valeur 1 et une var "index" avec valeur 0
+
 tant que l'iteration i est inférieur au nombre d'éléments dans la liste:
-    -On déplace le dernier élément de la liste au premier emplacement
-    -On incrémente itration et index de 1.
+    -On déplace le dernier élément de la liste à l'emplacement de "index"
+    -On incrémente "iteration" et "index" de 1.
 """
 
 """
