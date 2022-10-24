@@ -33,7 +33,7 @@ elif mediane(tableau) < secret :
 
 import random
 
-tableau = [1,2,3,4,5,6,7,8,9]
+tableau = list(range(1,10))
 
 secret = random.choice(tableau)
 
@@ -57,7 +57,3 @@ while len(tableau) > 1 :
         
     elif centerValue < secret :
         tableau = tableau[centerIndex:]
-    
-    
-if len(tableau) == 1:
-    print(tableau)
