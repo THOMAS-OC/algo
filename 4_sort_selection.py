@@ -9,13 +9,14 @@ C'est un tri instable car il peut modifier l'ordre des éléments égaux.
 
 mini = 100
 
-array = [3, 2, 1, 5, 7, 9]
+array = [3, 2, 1, 5, 7, 3, 1, 9]
 
 array2 = []
 
 i = 0
 
 print(array)
+
 print("----")
 
 while True :
@@ -26,10 +27,11 @@ while True :
         
         if temp < mini :
             mini = temp
+            index_delete = array.index(mini, i)
             
     print("le plus petit est : ", mini, " \n ")
     
-    array.remove(mini)
+    array.pop(index_delete)
     array.insert(i, mini)
         
     i += 1
