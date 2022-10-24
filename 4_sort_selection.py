@@ -7,11 +7,11 @@ C'est un tri en place (qui n'utilise donc pas de mémoire supplémentaire car on
 C'est un tri instable car il peut modifier l'ordre des éléments égaux.
 """
 
-mini = 100
+# La variable i est incrémenter pour spécifier le départ de l'itération sur la liste et ignorer l'élément correctement placé
 
-array = [3, 2, 1, 5, 7, 3, 1, 9]
+# Pour déplacer un élément on le supprime via son index pour éviter de supprimer un autre chiffre identique placé précédemment. Puis on l'insert à la position spécifié par i
 
-array2 = []
+array = [3, 2, 1, 5, 7, 3, 1, 9, -7]
 
 i = 0
 
@@ -21,7 +21,7 @@ print("----")
 
 while True :
     
-    mini = 100
+    mini = max(array) + 1
     
     for temp in array[i:]:
         
@@ -29,14 +29,13 @@ while True :
             mini = temp
             index_delete = array.index(mini, i)
             
-    print("le plus petit est : ", mini, " \n ")
-    
     array.pop(index_delete)
     array.insert(i, mini)
         
     i += 1
     
-    print(array)
-    
     if i == len(array) - 1 :
         break
+    
+print(array)
+    
