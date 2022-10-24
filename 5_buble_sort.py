@@ -2,13 +2,11 @@ i = 0
 
 nb_boucle = 0
 
-array = [3,5,2,1,9, -5, 4,20]
+array = [3,5,2]
 
-array_sorted = array[:]
+tested = False
 
-array_sorted.sort()
-
-while array != array_sorted:
+while True:
     
     try :
         
@@ -20,12 +18,20 @@ while array != array_sorted:
             
             array[i+1] = temp
             
-            temp = False
+            temp = 0
+            
+            tested = True
             
         i += 1
         
     except :
         
+        if not tested :
+            break
+        
+        else :
+            tested = False
+            
         i = 0
 
 print(array)
