@@ -7,27 +7,34 @@ C'est un tri en place (qui n'utilise donc pas de mémoire supplémentaire car on
 C'est un tri instable car il peut modifier l'ordre des éléments égaux.
 """
 
-tableau = [3,2,6,1,7,0,9,4,-4]
-copy = tableau[:]
-copy.sort()
+mini = 100
 
-depart = 0
+array = [3, 2, 1, 5, 7, 9]
 
-while tableau != copy :
+array2 = []
+
+i = 0
+
+print(array)
+print("----")
+
+while True :
     
-    mini = max(tableau)
-
-    for t in tableau[depart:] :
+    mini = 100
+    
+    for temp in array[i:]:
+        
+        if temp < mini :
+            mini = temp
             
-        if t < mini :
-            mini = t
-            tableau.remove(t)
+    print("le plus petit est : ", mini, " \n ")
+    
+    array.remove(mini)
+    array.insert(i, mini)
         
-        
-    tableau.insert(depart, mini)
+    i += 1
     
-    depart += 1
-    print(tableau)
-
+    print(array)
     
-    
+    if i == len(array) - 1 :
+        break
